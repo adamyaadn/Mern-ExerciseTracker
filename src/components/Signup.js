@@ -1,6 +1,7 @@
 /*eslint-disable*/
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './login.css';
 
 export default function Signup(props) { 
@@ -9,7 +10,11 @@ export default function Signup(props) {
     const handleChange = (field) =>(event) => {
         setUser({...user, [field]:event.target.value})
     }
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert("asa")
+        console.log("daaaa",user)
+        alert("asa")
         axios.post('http://localhost:5000/users/add', user)
         .then(res => {
             console.log(res.body);

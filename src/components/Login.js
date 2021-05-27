@@ -24,7 +24,7 @@ export default function Login(props){
             console.error(err)
         })
     }
-    if(isLoggedin) return <Redirect to='http://localhost:5000/homepage'/>
+    if(isLoggedin) return <Redirect to='/homepage'/>
     else return(
         <div className="containment">
             <div className="container">

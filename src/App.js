@@ -19,8 +19,8 @@ import LandingPage from "./LandingPage.js"
 function App() {
   return (
     <Router>
-      //<div className="container">
-      //<Navbar />
+      <div className="container">
+      <Navbar />
       <br/>
       <Route path="/" exact component={LandingPage} />
       <Route path="/homepage" exact component={Homepage} />
@@ -34,7 +34,7 @@ function App() {
       <Route path="/water" exact component={WaterList} />
       <Route path="/createwater" component={CreateWater} />
       <Route path="/editwater/:id" component={EditWater} />
-      //</div>
+      </div>
     </Router>
   );
 }
