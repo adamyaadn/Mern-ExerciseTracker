@@ -9,7 +9,7 @@ const Water = props => (
     <td>{props.water.quantity}</td>
     <td>{props.water.date.substring(0,10)}</td>
     <td>
-      <Link to={"/edit/"+props.water._id}>edit</Link> | <a href="/water" onClick={() => { props.deleteWater(props.water._id) }}>delete</a>
+      <Link to={"/editwater/"+props.water._id}>edit</Link> | <a href="/water" onClick={() => { props.deleteWater(props.water._id) }}>delete</a>
     </td>
   </tr>
 )

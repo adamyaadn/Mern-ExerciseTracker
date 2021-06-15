@@ -57,13 +57,13 @@ export default function Login(props){
                         <div className="box-right">
                             <p className="login-text">Login below</p>
                             <form onSubmit={handleSubmit}>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input id="email" type="text" class="form-control" name="email" placeholder="Email" value={user.email} onChange={handleChange('email')}/>
+                                <div className="input-group">
+                                    <span className="input-group-addon"><i className="glyphicon glyphicon-user"></i></span>
+                                    <input id="email" type="text" className="form-control" name="email" placeholder="Email" value={user.email} onChange={handleChange('email')}/>
                                 </div>
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                    <input id="password" type="password" class="form-control" name="password" placeholder="Password" value={user.password} onChange={handleChange('password')}/>
+                                <div className="input-group">
+                                    <span className="input-group-addon"><i className="glyphicon glyphicon-lock"></i></span>
+                                    <input id="password" type="password" className="form-control" name="password" placeholder="Password" value={user.password} onChange={handleChange('password')}/>
                                 </div>
                                 <div className="forgot-group">
                                     <Link to='/'>Forgot Password?</Link>

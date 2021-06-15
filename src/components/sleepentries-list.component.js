@@ -9,7 +9,7 @@ const Sleep = props => (
     <td>{props.sleep.duration}</td>
     <td>{props.sleep.date.substring(0,10)}</td>
     <td>
-      <Link to={"/edit/"+props.sleep._id}>edit</Link> | <a href="/sleep" onClick={() => { props.deleteSleep(props.sleep._id) }}>delete</a>
+      <Link to={"/editsleep/"+props.sleep._id}>edit</Link> | <a href="/sleep" onClick={() => { props.deleteSleep(props.sleep._id) }}>delete</a>
     </td>
   </tr>
 )

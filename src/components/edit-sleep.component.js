@@ -117,7 +117,7 @@ export default class EditSleep extends Component {
     return (
     <div>
     
-      <h3 style={h3style}>Edit Water Log</h3>
+      <h3 style={h3style}>Edit Sleep Log</h3>
 
       <br></br>
       <div className="container" style={contianerstyle}>

@@ -12,7 +12,8 @@ export default class Navbar extends Component {
   render() {
 
     const style = {
-    marginLeft:"30%"
+    //marginLeft:"30%"
+    margin : "auto"
     };
 
     return (
