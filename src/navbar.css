@@ -1,0 +1,35 @@
+.navbar{
+	color:white;
+	width: 100%;
+	padding-right:0;
+    padding-left:0;
+    margin-right:auto;
+    margin-left:auto
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color: white;
+    margin-right: 0;
+    padding-right: 0;
+    box-sizing: 15px;
+    display: inline;
+    width: 50px;
+    background: maroon;
+    padding: 8px 10px;
+    border-radius: 20px;
+
+}
+
+.ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand.navbar-left{
+	color: maroon;
+	font-family: Cursive;
+	font-size: 35px;
+	background: white;
+	border-radius: 25px;
+}

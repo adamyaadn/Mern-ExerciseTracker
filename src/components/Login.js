@@ -5,6 +5,8 @@ import axios from 'axios';
 import './login.css';
 
 export default function Login(props){ 
+
+
     const {setMode} = props;
     const [isLoggedin, setLoggedin] = useState(false);
     const [user, setUser] = useState({email: '', password: ''});
@@ -24,12 +26,25 @@ export default function Login(props){
             console.error(err)
         })
     }
+
+    const mystyle = {
+        background: "white",
+        padding: "20px 20px 20px 20px",
+        marginTop: "10px",
+        marginLeft: "50px",
+        marginRight:"750px",
+        borderRadius: "30px",
+        color : "maroon",
+        fontFamily : "Cursive"
+        }
+    
+
     if(isLoggedin) return <Redirect to='/homepage'/>
     else return(
         <div className="containment">
             <div className="container">
                 <div className="header">
-                    <h2>Login to your account</h2>
+                    <h2 style={mystyle}>Healthify</h2>
                     <div className="boxes">
                         <div className="box-left">
                             <div className="signup-box">

@@ -12,9 +12,9 @@ export default function Signup(props) {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert("asa")
+        
         console.log("daaaa",user)
-        alert("asa")
+        
         axios.post('http://localhost:5000/users/add', user)
         .then(res => {
             console.log(res.body);
@@ -23,13 +23,26 @@ export default function Signup(props) {
         })
         .catch(err => {
             console.error(err)
-        })
-    }
+        }) }
+    
+
+    const mystyle = {
+        background: "white",
+        padding: "20px 20px 20px 20px",
+        marginTop: "10px",
+        marginLeft: "50px",
+        marginRight:"750px",
+        borderRadius: "30px",
+        color : "maroon",
+        fontFamily : "Cursive"
+        }
+    
+
     return(
         <div className="containment">
             <div className="container">
                 <div className="header">
-                <h2>Sign up for an account</h2>
+                <h2 style={mystyle}>Healthify</h2>
                     <div className="boxes">
                         <div className="box-left">
                             <div className="signup-box">
@@ -44,27 +57,27 @@ export default function Signup(props) {
                             <form onSubmit={handleSubmit}>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input id="name" type="text" class="form-control" name="name" placeholder="Full Name" value={user.name} onChange={handleChange('name')}/>
+                                    <input id="username" type="text" class="form-control" username="name" placeholder="Full Name" value={user.username} onChange={handleChange('username')}/>
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input id="Age" type="text" class="form-control" age="Age" placeholder="Age" value={user.age} onChange={handleChange('age')}/>
+                                    <input id="age" type="text" class="form-control" age="Age" placeholder="Age" value={user.age} onChange={handleChange('age')}/>
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input id="Height" type="number" class="form-control" height="height" placeholder="Height" value={user.height} onChange={handleChange('height')}/>
+                                    <input id="height" type="number" class="form-control" height="height" placeholder="Height" value={user.height} onChange={handleChange('height')}/>
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input id="Weight" type="text" class="form-control" weight="weight" placeholder="Weight" value={user.weight} onChange={handleChange('weight')}/>
+                                    <input id="weight" type="text" class="form-control" weight="weight" placeholder="Weight" value={user.weight} onChange={handleChange('weight')}/>
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input id="email" type="text" class="form-control" name="email" placeholder="Email" value={user.email} onChange={handleChange('email')}/>
+                                    <input id="email" type="text" class="form-control" email="email" placeholder="Email" value={user.email} onChange={handleChange('email')}/>
                                 </div>
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                                    <input id="password" type="password" class="form-control" name="password" placeholder="Password" value={user.password} onChange={handleChange('password')}/>
+                                    <input id="password" type="password" class="form-control" password="password" placeholder="Password" value={user.password} onChange={handleChange('password')}/>
                                 </div>
                                 <div className="forgot-group">
                                     <input type="submit" value="Sign Up!" />

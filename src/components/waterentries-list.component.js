@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Navbar from "./navbar.component"
 
 const Water = props => (
   <tr>
@@ -8,7 +9,7 @@ const Water = props => (
     <td>{props.water.quantity}</td>
     <td>{props.water.date.substring(0,10)}</td>
     <td>
-      <Link to={"/edit/"+props.water._id}>edit</Link> | <a href="/#" onClick={() => { props.deleteWater(props.water._id) }}>delete</a>
+      <Link to={"/edit/"+props.water._id}>edit</Link> | <a href="/water" onClick={() => { props.deleteWater(props.water._id) }}>delete</a>
     </td>
   </tr>
 )
@@ -48,10 +49,30 @@ export default class WaterList extends Component {
   }
 
   render() {
+
+    const h3style = {
+      backgroundColor: "maroon",
+      color: "white",
+      fontFamily: "Times New Roman",
+      marginLeft : "450px",
+      marginRight : "450px",
+      borderRadius : "10px",
+      fontSize : "30px"
+    }
+    const contianerstyle = {
+      backgroundColor: "white",
+      color : "black",
+      height : "500px",
+      width : "800px"
+    }
+
     return (
       
       <div>
-        <h3>Logged Water consumption entries</h3>
+      <Navbar />
+        <h3 style={h3style}>Logged Water consumption entries</h3>
+        <br></br>
+        <div className="container" style={contianerstyle}>
         <table className="table">
           <thead className="thead-light">
             <tr>
@@ -65,6 +86,7 @@ export default class WaterList extends Component {
             { this.waterList() }
           </tbody>
         </table>
+      </div>
       </div>
     )
   }

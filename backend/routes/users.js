@@ -13,7 +13,6 @@ router.post('/add', (req,res) => {
   const username = req.body.username;
   const password = req.body.password;
   const email = req.body.email;
-
   const age = Number(req.body.age);
   const height = Number(req.body.height);
   const weight = Number(req.body.weight);

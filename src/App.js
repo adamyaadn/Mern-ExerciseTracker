@@ -1,7 +1,7 @@
 import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./navbar.css"
+import "bootstrap/dist/css/bootstrap.min.css"
 import { BrowserRouter as Router, Route} from "react-router-dom";
-
 import Navbar from "./components/navbar.component"
 import ExercisesList from "./components/exercises-list.component";
 import EditExercise from "./components/edit-exercise.component";
@@ -19,9 +19,9 @@ import LandingPage from "./LandingPage.js"
 function App() {
   return (
     <Router>
-      <div className="container">
+      {/*<div className="container">
       <Navbar />
-      <br/>
+      <br/>*/}
       <Route path="/" exact component={LandingPage} />
       <Route path="/homepage" exact component={Homepage} />
       <Route path="/exercises" exact component={ExercisesList} />
@@ -34,7 +34,7 @@ function App() {
       <Route path="/water" exact component={WaterList} />
       <Route path="/createwater" component={CreateWater} />
       <Route path="/editwater/:id" component={EditWater} />
-      </div>
+      {/*</div>*/}
     </Router>
   );
 }

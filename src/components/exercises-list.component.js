@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import Navbar from "./navbar.component"
+import Navbar from "./navbar.component";
+import "../navbar.css"
 
 const Exercise = props => (
   <tr>
@@ -10,7 +11,7 @@ const Exercise = props => (
     <td>{props.exercise.duration}</td>
     <td>{props.exercise.date.substring(0,10)}</td>
     <td>
-      <Link to={"/edit/"+props.exercise._id}>edit</Link> | <a href="/#" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</a>
+      <Link to={"/edit/"+props.exercise._id}>edit</Link> | <a href="/exercises/" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</a>
     </td>
   </tr>
 )
@@ -50,11 +51,32 @@ export default class ExercisesList extends Component {
   }
 
   render() {
+
+    const h3style = {
+      backgroundColor: "maroon",
+      color: "white",
+      fontWeight: "bold",
+      fontFamily: "Times New Roman",
+      marginLeft : "450px",
+      marginRight : "450px",
+      borderRadius : "10px",
+      fontSize : "30px"
+    }
+
+    const contianerstyle = {
+      backgroundColor: "white",
+      color : "black",
+      height : "500px",
+      width : "800px"
+    }
+
     return (
 
       <div>
-      <navbar />
-        <h3>Logged Exercises</h3>
+      <Navbar />
+        <h3 style={h3style}>Logged Exercises</h3>
+        <br></br>
+        <div className="container" style={contianerstyle}>
         <table className="table">
           <thead className="thead-light">
             <tr>
@@ -69,6 +91,7 @@ export default class ExercisesList extends Component {
             { this.exerciseList() }
           </tbody>
         </table>
+        </div>
       </div>
     )
   }

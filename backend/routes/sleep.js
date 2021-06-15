@@ -24,23 +24,23 @@ router.route('/add').post((req, res) => {
 });
 
 router.route('/:id').get((req, res) => {
-  Water.findById(req.params.id)
+  Sleep.findById(req.params.id)
     .then(sleepentry=> res.json(sleepentry))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
 router.route('/:id').delete((req, res) => {
-  Water.findByIdAndDelete(req.params.id)
+  Sleep.findByIdAndDelete(req.params.id)
     .then(() => res.json('Sleep entry deleted.'))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
 router.route('/update/:id').post((req, res) => {
-  Water.findById(req.params.id)
+  Sleep.findById(req.params.id)
     .then(sleepentry => {
-      waterentry.username = req.body.username;
-      waterentry.duration = Number(req.body.duration);
-      waterentry.date = Date.parse(req.body.date);
+      sleepentry.username = req.body.username;
+      sleepentry.duration = Number(req.body.duration);
+      sleepentry.date = Date.parse(req.body.date);
 
       sleepentry.save()
         .then(() => res.json('Sleep entry updated!'))

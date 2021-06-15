@@ -84,13 +84,46 @@ export default class EditSleep extends Component {
   }
 
   render() {
+
+    const h3style = {
+      backgroundColor: "maroon",
+      color: "white",
+      fontWeight: "bold",
+      fontFamily: "Times New Roman",
+      marginLeft : "450px",
+      marginRight : "450px",
+      borderRadius : "10px",
+      fontSize : "35px",
+      marginTop : "10px"
+    }
+
+    const labelstyle = {
+      fontWeight: "bold",
+      fontFamily: "Times New Roman",
+      color: "maroon",
+      backgroundColor : "white",
+      borderRadius : "20px",
+      fontSize : "25px",
+      paddingTop : "0px"
+    }
+
+    const contianerstyle = {
+      backgroundColor: "white",
+      color : "black",
+      height : "500px",
+      width : "800px"
+    }
+
     return (
     <div>
-    <navbar />
-      <h3>Edit Water Log</h3>
+    
+      <h3 style={h3style}>Edit Water Log</h3>
+
+      <br></br>
+      <div className="container" style={contianerstyle}>
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
-          <label>Username: </label>
+          <label style={labelstyle}>Username: </label>
           <select ref="userInput"
               required
               className="form-control"
@@ -107,7 +140,7 @@ export default class EditSleep extends Component {
           </select>
         </div>
         <div className="form-group"> 
-          <label>Duration </label>
+          <label style={labelstyle}>Duration </label>
           <input  type="text"
               required
               className="form-control"
@@ -116,7 +149,7 @@ export default class EditSleep extends Component {
               />
         </div>
         <div className="form-group">
-          <label>Date: </label>
+          <label style={labelstyle}>Date: </label>
           <div>
             <DatePicker
               selected={this.state.date}
@@ -129,6 +162,7 @@ export default class EditSleep extends Component {
           <input type="submit" value="Edit Sleep Log" className="btn btn-primary" />
         </div>
       </form>
+    </div>
     </div>
     )
   }

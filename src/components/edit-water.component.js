@@ -34,19 +34,20 @@ export default class EditWater extends Component {
         console.log(error);
       })
 
-    axios.get('http://localhost:5000/users/')
-      .then(response => {
-        if (response.data.length > 0) {
-          this.setState({
-            users: response.data.map(user => user.username),
-          })
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      })
+  //   axios.get('http://localhost:5000/users/')
+  //     .then(response => {
+  //       if (response.data.length > 0) {
+  //         this.setState({
+  //           users: response.data.map(user => user.username),
+  //         })
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     })
 
-  }
+  // 
+}
 
   onChangeUsername(e) {
     this.setState({
@@ -84,15 +85,53 @@ export default class EditWater extends Component {
   }
 
   render() {
+
+    const h3style = {
+      backgroundColor: "maroon",
+      color: "white",
+      fontWeight: "bold",
+      fontFamily: "Times New Roman",
+      marginLeft : "450px",
+      marginRight : "450px",
+      borderRadius : "10px",
+      fontSize : "35px",
+      marginTop : "10px"
+    }
+
+    const labelstyle = {
+      fontWeight: "bold",
+      fontFamily: "Times New Roman",
+      color: "maroon",
+      backgroundColor : "white",
+      borderRadius : "20px",
+      fontSize : "25px",
+      paddingTop : "0px"
+    }
+
+    const contianerstyle = {
+      backgroundColor: "white",
+      color : "black",
+      height : "500px",
+      width : "800px"
+    }
+    
     return (
 
     <div>
-     <navbar />
-      <h3>Edit Water Log</h3>
+     
+      <h3 style={h3style} >Edit Water Log</h3>
+      <br></br>
+      <div className="container" style={contianerstyle}>
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
-          <label>Username: </label>
-          <select ref="userInput"
+          <label style={labelstyle}>Username: </label>
+          <input  type="text"
+              required
+              className="form-control"
+              value={this.state.username}
+              onChange={this.onChangeUsername}
+              />
+          {/*<select ref="userInput"
               required
               className="form-control"
               value={this.state.username}
@@ -105,10 +144,10 @@ export default class EditWater extends Component {
                     </option>;
                 })
               }
-          </select>
+          </select>*/}
         </div>
         <div className="form-group"> 
-          <label>Quantity </label>
+          <label style={labelstyle}>Quantity </label>
           <input  type="text"
               required
               className="form-control"
@@ -117,7 +156,7 @@ export default class EditWater extends Component {
               />
         </div>
         <div className="form-group">
-          <label>Date: </label>
+          <label style={labelstyle}>Date: </label>
           <div>
             <DatePicker
               selected={this.state.date}
@@ -127,9 +166,10 @@ export default class EditWater extends Component {
         </div>
 
         <div className="form-group">
-          <input type="submit" value="Edit Exercise Log" className="btn btn-primary" />
+          <input type="submit" value="Edit Water Log" className="btn btn-primary" />
         </div>
       </form>
+    </div>
     </div>
     )
   }

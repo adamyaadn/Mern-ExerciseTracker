@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
-import "react-datepicker/dist/react-datepicker.css";
 import Navbar from "./navbar.component"
+import styles from "./component.css";
 
 export default class CreateExercise extends Component {
   constructor(props) {
@@ -24,18 +24,18 @@ export default class CreateExercise extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/users/')
-      .then(response => {
-        if (response.data.length > 0) {
-          this.setState({
-            users: response.data.map(user => user.username),
-            username: response.data[0].username
-          })
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      })
+    // axios.get('http://localhost:5000/users/')
+    //   .then(response => {
+    //     if (response.data.length > 0) {
+    //       this.setState({
+    //         users: response.data.map(user => user.username),
+    //         username: response.data[0].username
+    //       })
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   })
 
   }
 
@@ -84,30 +84,55 @@ export default class CreateExercise extends Component {
       
 
   render() {
+
+    const h3style = {
+      backgroundColor: "maroon",
+      color: "white",
+      fontWeight: "bold",
+      fontFamily: "Times New Roman",
+      marginLeft : "450px",
+      marginRight : "450px",
+      borderRadius : "10px",
+      fontSize : "35px",
+      marginTop : "10px"
+    }
+
+    const labelstyle = {
+      fontWeight: "bold",
+      fontFamily: "Times New Roman",
+      color: "maroon",
+      backgroundColor : "white",
+      borderRadius : "20px",
+      fontSize : "25px",
+      paddingTop : "0px"
+    }
+    const contianerstyle = {
+      backgroundColor: "white",
+      color : "black",
+      height : "500px",
+      width : "800px"
+    }
+    
     return (
     <div>
     
-      <h3>Create New Exercise Log</h3>
+      <h3 style={h3style}>Create New Exercise Log</h3>
+
+      <br></br>
+      <div className="container" style={contianerstyle}>
       <form onSubmit={this.onSubmit}>
         <div className="form-group"> 
-          <label>Username: </label>
-          <select ref="userInput"
+          <br></br>
+          <label style={labelstyle}>Username: </label>
+          <input  type="text"
               required
               className="form-control"
               value={this.state.username}
-              onChange={this.onChangeUsername}>
-              {
-                this.state.users.map(function(user) {
-                  return <option 
-                    key={user}
-                    value={user}>{user}
-                    </option>;
-                })
-              }
-          </select>
+              onChange={this.onChangeUsername}
+              />
         </div>
         <div className="form-group"> 
-          <label>Description: </label>
+          <label style={labelstyle}>Description: </label>
           <input  type="text"
               required
               className="form-control"
@@ -116,7 +141,7 @@ export default class CreateExercise extends Component {
               />
         </div>
         <div className="form-group">
-          <label>Duration (in minutes): </label>
+          <label style={labelstyle}>Duration (in minutes): </label>
           <input 
               type="text" 
               className="form-control"
@@ -125,7 +150,7 @@ export default class CreateExercise extends Component {
               />
         </div>
         <div className="form-group">
-          <label>Date: </label>
+          <label style={labelstyle}>Date: </label>
           <div>
             <DatePicker
               selected={this.state.date}
@@ -138,6 +163,7 @@ export default class CreateExercise extends Component {
           <input type="submit" value="Create Exercise Log" className="btn btn-primary" />
         </div>
       </form>
+    </div>
     </div>
     )
   }

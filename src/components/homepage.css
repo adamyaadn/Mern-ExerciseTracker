@@ -1,0 +1,294 @@
+/*!
+ * Start Bootstrap - Landing Page v5.0.9 (https://startbootstrap.com/theme/landing-page)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-landing-page/blob/master/LICENSE)
+ */
+
+body {
+  background-image: url("https://tse1.mm.bing.net/th?id=OIP.CgajcT6xjyPYlJw9rKQbGgHaDt&pid=Api&rs=1&c=1&qlt=95&w=196&h=98");
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  scroll-behavior: smooth;
+}
+
+.title{
+    background: white;
+    padding: 20px 20px 20px 20px;
+    margin-top: 50px;
+    height: 750px;
+    width : 1090px;
+    margin-left: 1%;
+    margin-right:20px;
+    border-radius: 25px;
+
+}
+
+div {
+opacity: 50;
+transition: width 5s;
+transition-timing-function: ease;
+}
+
+
+
+.heading{
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  color: brown;
+  font-family: cursive;
+  font-size: 50px;
+}
+
+.video{
+    float: left;
+}
+
+.intro{
+    float: right;
+    margin-left: 55%;
+    margin-top: -36%;
+    text-align: justify;
+}
+
+h4{
+    font-family: cursive;
+    text-align: center;
+}
+
+header.masthead {
+  position: relative;
+  background-color: blue;
+ 
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+header.masthead h1 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  header.masthead {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+
+  }
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+}
+
+.showcase .showcase-text {
+  padding: 3rem;
+}
+
+.showcase .showcase-img {
+  min-height: 30rem;
+  background-size: cover;
+}
+
+@media (min-width: 768px) {
+  .showcase .showcase-text {
+    padding: 7rem;
+  }
+}
+
+.features-icons {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.features-icons .features-icons-item {
+  max-width: 20rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon {
+  height: 7rem;
+}
+
+.features-icons .features-icons-item .features-icons-icon i {
+  font-size: 4.5rem;
+}
+
+.features-icons .features-icons-item:hover .features-icons-icon i {
+  font-size: 5rem;
+}
+
+.testimonials {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.testimonials .testimonial-item {
+  max-width: 18rem;
+}
+
+.testimonials .testimonial-item img {
+  max-width: 12rem;
+  box-shadow: 0px 5px 5px 0px #adb5bd;
+}
+
+.call-to-action {
+  position: relative;
+  background-color: #343a40;
+  
+  background-size: cover;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.call-to-action .overlay {
+  position: absolute;
+  background-color: #212529;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+footer.footer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:700px;
+    height: 350px;
+    padding: 20px 20px 20px 20px;
+}
+
+.paragraph{
+    border-radius: 25px;
+    background: white;
+    padding: 30px 20px 20px 20px;
+    width: 42%;
+    height: 600px;
+    margin-top: 4px;
+    margin-left: 70px;
+    text-align: justify;
+    float: left;
+    color: maroon;
+    position: sticky;
+}
+
+h3{
+    text-align: center;
+    font-weight: bold;
+}
+
+.paragraph2{
+    border-radius: 25px;
+    background: white;
+    padding: 30px 20px 20px 20px;
+    width: 42%;
+    margin-top: 4px;
+    height: 600px;
+    margin-right: 70px;
+    float: right;
+    text-align: justify;
+    color: maroon;
+    position: sticky;
+}
+
+.paragraph3{
+    border-radius: 25px;
+    background: white;
+    padding: 20px 20px 20px 20px;
+    width: 45%;
+    margin-top: 700px;
+    height: 650px;
+    margin-left: 28%;
+    text-align: justify;
+    color: maroon;
+    top: 50%;
+    left: 50%;
+            
+}
+
+.image1{
+    height: 40%;
+    width: 60%;
+    margin-left: 20%;
+    
+}
+
+
+.container{
+    margin-bottom: 50px;
+}
+
+.footer{
+    text-align: justify;
+    shape-image-threshold: inherit;
+    shape-margin: 0pc;
+    box-shadow: aqua;
+    background-origin: padding-box;
+    box-sizing: content-box;
+    box-sizing: border-box;
+    float: inline-end;
+    padding: 40px;
+    position: sticky ;
+    text-align: center;
+    color : rgb(8, 8, 8);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    float: inline-end;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-linkedin {
+    background: #04365a;
+    color: white;
+  }
+
+  .fa-pinterest {
+    background: red;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: pink;
+    color: rgb(236, 9, 9);
+  }
