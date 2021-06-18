@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-import Navbar from "./navbar.component"
+//import Navbar from "./navbar.component"
 
 export default class EditWater extends Component {
   constructor(props) {
@@ -147,7 +147,7 @@ export default class EditWater extends Component {
           </select>*/}
         </div>
         <div className="form-group"> 
-          <label style={labelstyle}>Quantity </label>
+          <label style={labelstyle}>Quantity (in glasses)</label>
           <input  type="text"
               required
               className="form-control"

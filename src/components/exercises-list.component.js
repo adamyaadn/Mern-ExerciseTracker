@@ -4,6 +4,12 @@ import axios from 'axios';
 import Navbar from "./navbar.component";
 import "../navbar.css"
 
+const style = {
+  backgroundColor:"maroon",
+  color : "white",
+  borderRadius : "10px"
+}
+
 const Exercise = props => (
   <tr>
     <td>{props.exercise.username}</td>
@@ -11,10 +17,11 @@ const Exercise = props => (
     <td>{props.exercise.duration}</td>
     <td>{props.exercise.date.substring(0,10)}</td>
     <td>
-      <Link to={"/edit/"+props.exercise._id}>edit</Link> | <a href="/exercises/" onClick={() => { props.deleteExercise(props.exercise._id) }}>delete</a>
+      <Link to={"/edit/"+props.exercise._id} style={style}>&nbsp;&nbsp;&nbsp;Edit&nbsp;&nbsp;&nbsp;</Link> | <a href="/exercises/" onClick={() => { props.deleteExercise(props.exercise._id) }} style={style}>&nbsp;&nbsp;&nbsp;Delete&nbsp;&nbsp;&nbsp;</a>
     </td>
   </tr>
 )
+
 
 export default class ExercisesList extends Component {
   constructor(props) {

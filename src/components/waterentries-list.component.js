@@ -3,13 +3,19 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from "./navbar.component"
 
+const style = {
+  backgroundColor:"maroon",
+  color : "white",
+  borderRadius : "10px"
+}
+
 const Water = props => (
   <tr>
     <td>{props.water.username}</td>
     <td>{props.water.quantity}</td>
     <td>{props.water.date.substring(0,10)}</td>
     <td>
-      <Link to={"/editwater/"+props.water._id}>edit</Link> | <a href="/water" onClick={() => { props.deleteWater(props.water._id) }}>delete</a>
+      <Link to={"/editwater/"+props.water._id} style={style}>&nbsp;&nbsp;&nbsp;Edit&nbsp;&nbsp;&nbsp;</Link> | <a href="/water" onClick={() => { props.deleteWater(props.water._id) }} style={style}>&nbsp;&nbsp;&nbsp;Delete&nbsp;&nbsp;&nbsp;</a>
     </td>
   </tr>
 )

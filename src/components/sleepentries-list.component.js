@@ -3,13 +3,20 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Navbar from "./navbar.component"
 
+const style = {
+  backgroundColor:"maroon",
+  color : "white",
+  borderRadius : "10px"
+}
+
+
 const Sleep = props => (
   <tr>
     <td>{props.sleep.username}</td>
     <td>{props.sleep.duration}</td>
     <td>{props.sleep.date.substring(0,10)}</td>
     <td>
-      <Link to={"/editsleep/"+props.sleep._id}>edit</Link> | <a href="/sleep" onClick={() => { props.deleteSleep(props.sleep._id) }}>delete</a>
+      <Link to={"/editsleep/"+props.sleep._id} style={style}>&nbsp;&nbsp;&nbsp;Edit&nbsp;&nbsp;&nbsp;</Link> | <a href="/sleep" onClick={() => { props.deleteSleep(props.sleep._id) }} style={style}>&nbsp;&nbsp;&nbsp;Delete&nbsp;&nbsp;&nbsp;</a>
     </td>
   </tr>
 )

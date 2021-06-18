@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
-import Navbar from "./navbar.component"
-import styles from "./component.css";
+//import Navbar from "./navbar.component"
+//import styles from "./component.css";
 
 export default class CreateExercise extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ export default class CreateExercise extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-      username: '',
+      username: 'Adamyaa',
       description: '',
       duration: 0,
       date: new Date(),

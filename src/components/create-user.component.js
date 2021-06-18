@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Navbar from "./navbar.component"
+//import Navbar from "./navbar.component"
 
 export default class CreateUser extends Component {
   constructor(props) {

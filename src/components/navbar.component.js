@@ -11,11 +11,6 @@ export default class Navbar extends Component {
 
   render() {
 
-    const style = {
-    //marginLeft:"30%"
-    margin : "auto"
-    };
-
     return (
       <nav className="navbar navbar-expand-lg ">
         <Link to="/homepage" className="navbar-brand navbar-left style={this.style}">Healthify</Link>

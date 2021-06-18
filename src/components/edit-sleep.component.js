@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-import Navbar from "./navbar.component"
+//import Navbar from "./navbar.component"
 
 export default class EditSleep extends Component {
   constructor(props) {
@@ -140,7 +140,7 @@ export default class EditSleep extends Component {
           </select>
         </div>
         <div className="form-group"> 
-          <label style={labelstyle}>Duration </label>
+          <label style={labelstyle}>Duration (in hours) </label>
           <input  type="text"
               required
               className="form-control"

@@ -88,7 +88,7 @@ export default class Homepage extends Component {
         <p>
            Connect to us also on   
            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="fa fa-instagram" > </a>
-           <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="fa fa-pinterest"></a>
+           <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="fa fa-pinterest"> </a>
            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="fa fa-linkedin"> </a>
            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="fa fa-facebook"> </a>
      </p>

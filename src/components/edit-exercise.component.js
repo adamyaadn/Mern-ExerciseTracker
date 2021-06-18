@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-import Navbar from "./navbar.component"
+//import Navbar from "./navbar.component"
 
 export default class EditExercise extends Component {
   constructor(props) {
